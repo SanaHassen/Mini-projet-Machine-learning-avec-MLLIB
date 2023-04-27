@@ -7,11 +7,6 @@ Using the dataset https://raw.githubusercontent.com/msellamiTN/Machine-Learning-
     - Docker
     - Docker Compose
 
-## Installation
-    1- Clone the repository: git clone https://github.com/SanaHassen/Mini-projet-Machine-learning-avec-MLLIB.git
-    2- Navigate to the project directory then cd src
-    3- Build Python image and start the containers: docker-compose up --build
-
 ## Explanation
 ### Step 1: Model Building
 The notebook containing the code for model building, exported from Databricks, is available in the files.
@@ -69,8 +64,11 @@ We attempted to provide new data using a POST query on Postman, as follows: loca
 ![HomeView](images/0.png)
 
 ### Step3: Containerization
-Dockerfile
-Docker Compose
+To make the deployment of the application easier in other environments, we defined a dockerfile that builds a Docker image for the Flask API and a docker-compose file that defines the configuration needed to run the Flask API.
+
+To be able to run the containerized application, proceed as follow:
+    1- Clone the repository: git clone https://github.com/SanaHassen/Mini-projet-Machine-learning-avec-MLLIB.git
+    2- Build Python image and start the containers: docker-compose up --build
 
 
 
