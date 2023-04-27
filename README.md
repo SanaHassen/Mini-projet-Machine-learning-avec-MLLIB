@@ -29,11 +29,11 @@ To prepare our data for training, we developed a pipeline that enables the creat
 The stages of our pipeline are:
 
 * Feature Transformation:
-`*` Convert categorical data into encoded data using stringIndexation and OneHotEncoder
-`*` Scale each variable to unit variance using the Standar Scaler.
+    * Convert categorical data into encoded data using stringIndexation and OneHotEncoder
+    * Scale each variable to unit variance using the Standar Scaler.
 
 * Feature Extraction:
-`*` Convert our regular columns into Spark feature vectors using vectorization.
+    * Convert our regular columns into Spark feature vectors using vectorization.
 
 To train our model, we split our data into two sets: a training set that contains 80% of the data and a testing set that contains the remaining 20%. We followed the Pareto rule to determine the split.
 
