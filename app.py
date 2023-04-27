@@ -19,8 +19,8 @@ spark = SparkSession.builder.appName('prediction-api').getOrCreate()
 
 #charger le modele a partir de dosser de serialisation (resultat de serialisation de phase de training )
 model = PipelineModel.load("lrModelPipeline")
-#developper l'api
 
+#developper l'api
 # Create a Flask app
 app = Flask(__name__)
 

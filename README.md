@@ -46,14 +46,27 @@ We obtained the following evaluation results for our models:
 * Random Forest Evalution:
 ![HomeView](images/random.PNG)
 
-> We also used cross-validation to ensure that the model is not overfitting to the training data and we had a result of 0.84 .
+> As shown in the results of different evaluators, the Logistic Regression model gave better results so we chose it as our prediction model. We also used cross-validation to ensure that the model is not overfitting to the training data and we had a result of 0.84 .
 
 3. model export:
 As a final step, we saved the trained model to a file format that can be easily shared or deployed. This exported model can then be loaded into a new environment to make predictions on new data which is the next step of our project.
 
 ### Step2: Building the Flask API
-Model loading
-API creation
+You can find the code responble of API creation ans starting in `app python file`.
+We first loaded the pre-trained machine learning model that we exported earlier using PySpark's PipelineModel class.
+
+Then we created the Flask app with an API route for receiving input data and returning predictions. The input data is expected to be in JSON format and to be able to be consumed by the model, we needed to convert it to a PySpark DataFrame.
+
+Once the input data is transformed, it's then used by the loaded model to generate the prediction, which is returned as a JSON object. 
+
+Finally, the Flask app is started and made available at the specified host and port. the Flask API will be running on the port localhost:8080. The model can now be applied to new data to make predictions on the probability of employee attrition.
+
+We attempted to provide new data using a POST query on Postman, as follows: localhost:8080/predict. The results obtained are shown below:
+* label = 1:
+![HomeView](images/1.png)
+
+* label = 0
+![HomeView](images/0.png)
 
 ### Step3: Containerization
 Dockerfile
@@ -62,15 +75,6 @@ Docker Compose
 
 
 
-## Usage 
-After launching the Docker container, the Flask API will be running on the port localhost:8080. The model can now be applied to new data to make predictions on the probability of employee attrition.
-
-We attempted to provide new data using a POST query on Postman, as follows: localhost:8080/predict. The results obtained are shown below:
-* label = 1:
-![HomeView](images/1.png)
-
-* label = 0
-![HomeView](images/0.png)
 
 
 
