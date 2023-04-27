@@ -41,10 +41,10 @@ As our use case is binary classification, we tested two machine learning models:
 
 We obtained the following evaluation results for our models:
 * Logistic regression Evalution:
-![HomeView](images/logistic.png)
+![HomeView](images/logistic.PNG)
 
 * Random Forest Evalution:
-![HomeView](images/random.png)
+![HomeView](images/random.PNG)
 
 > We also used cross-validation to ensure that the model is not overfitting to the training data and we had a result of 0.84 .
 
@@ -66,7 +66,10 @@ Docker Compose
 After launching the Docker container, the Flask API will be running on the port localhost:8080. The model can now be applied to new data to make predictions on the probability of employee attrition.
 
 We attempted to provide new data using a POST query on Postman, as follows: localhost:8080/predict. The results obtained are shown below:
+* label = 1:
 ![HomeView](images/1.png)
+
+* label = 0
 ![HomeView](images/0.png)
 
 
