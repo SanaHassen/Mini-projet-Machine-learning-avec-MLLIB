@@ -67,7 +67,9 @@ We attempted to provide new data using a POST query on Postman, as follows: loca
 To make the deployment of the application easier in other environments, we defined a dockerfile that builds a Docker image for the Flask API and a docker-compose file that defines the configuration needed to run the Flask API.
 
 To be able to run the containerized application, proceed as follow:
+
     1- Clone the repository: git clone https://github.com/SanaHassen/Mini-projet-Machine-learning-avec-MLLIB.git
+    
     2- Build Python image and start the containers: docker-compose up --build
 
 
