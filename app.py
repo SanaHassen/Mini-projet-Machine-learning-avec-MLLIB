@@ -4,15 +4,9 @@ findspark.init()
 import json
 
 import pyspark
-from flask import Flask, request, jsonify, render_template
+from flask import Flask, request, jsonify
 from pyspark.sql import SparkSession
 from pyspark.ml import PipelineModel
-from pyspark.ml.feature import VectorAssembler
-from pyspark.ml.classification import LogisticRegression
-from pyspark.ml import Pipeline
-import os
-from pyspark.sql.types import StructType, StructField, DoubleType
-import pandas as pd
 
 
 spark = SparkSession.builder.appName('prediction-api').getOrCreate()

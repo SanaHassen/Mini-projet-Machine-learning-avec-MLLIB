@@ -36,9 +36,11 @@ As our use case is binary classification, we tested two machine learning models:
 
 We obtained the following evaluation results for our models:
 * Logistic regression Evalution:
+
 ![HomeView](images/logistic.PNG)
 
 * Random Forest Evalution:
+
 ![HomeView](images/random.PNG)
 
 > As shown in the results of different evaluators, the Logistic Regression model gave better results so we chose it as our prediction model. We also used cross-validation to ensure that the model is not overfitting to the training data and we had a result of 0.84 .
